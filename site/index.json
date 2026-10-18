@@ -1,0 +1,42 @@
+{
+  "format": 1,
+  "title": {
+    "en": "DSH Desktop Tweaks",
+    "zh": "DSH 桌面增强"
+  },
+  "description": {
+    "en": "Desktop tweaks for DeepSeek Harness: F11 fullscreen toggle and smart Ctrl+C/V in the built-in terminal.",
+    "zh": "DeepSeek Harness 桌面端增强：F11 全屏切换，终端内 Ctrl+C/V 智能复制粘贴。"
+  },
+  "plugins": [
+    {
+      "name": "dsh-desktop-tweaks",
+      "title": {
+        "en": "Desktop Tweaks",
+        "zh": "桌面增强"
+      },
+      "description": {
+        "en": "F11 fullscreen toggle and smart Ctrl+C/V in the built-in terminal.",
+        "zh": "F11 切换窗口全屏；终端内 Ctrl+C/V 智能复制粘贴。"
+      },
+      "icon": "icons/icon.svg",
+      "author": "著名青柑橘",
+      "homepage": "https://github.com/amstlkqp114514/dsh-desktop-tweaks#readme",
+      "repository": {
+        "url": "https://github.com/amstlkqp114514/dsh-desktop-tweaks"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792298451,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2"
+          }
+        }
+      ]
+    }
+  ]
+}

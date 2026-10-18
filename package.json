@@ -1,0 +1,55 @@
+{
+  "name": "dsh-desktop-tweaks",
+  "version": "0.1.0",
+  "description": "Desktop tweaks for DeepSeek Harness: F11 fullscreen toggle and smart Ctrl+C/V in the built-in terminal.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "desktop",
+    "fullscreen",
+    "terminal",
+    "clipboard",
+    "f11"
+  ],
+  "author": "著名青柑橘",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amstlkqp114514/dsh-desktop-tweaks.git"
+  },
+  "homepage": "https://github.com/amstlkqp114514/dsh-desktop-tweaks#readme",
+  "bugs": {
+    "url": "https://github.com/amstlkqp114514/dsh-desktop-tweaks/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "icon": "icon.svg",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}
