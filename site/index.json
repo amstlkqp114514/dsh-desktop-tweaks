@@ -20,7 +20,7 @@
         "zh": "F11 切换窗口全屏；终端内 Ctrl+C/V 智能复制粘贴。"
       },
       "icon": "icons/icon.svg",
-      "author": "著名青柑橘",
+      "author": "青柑橘",
       "homepage": "https://github.com/amstlkqp114514/dsh-desktop-tweaks#readme",
       "repository": {
         "url": "https://github.com/amstlkqp114514/dsh-desktop-tweaks"

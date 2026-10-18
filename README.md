@@ -104,7 +104,7 @@ npm publish --access public
 
 ## License
 
-MIT © 2026 著名青柑橘
+MIT © 2026 青柑橘
 
 ---
 
