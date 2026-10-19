@@ -56,16 +56,16 @@ const index = {
   format: 1,
   title: { en: "DSH Desktop Tweaks", zh: "DSH 桌面增强" },
   description: {
-    en: "Desktop tweaks for DeepSeek Harness: F11 fullscreen toggle and smart Ctrl+C/V in the built-in terminal.",
-    zh: "DeepSeek Harness 桌面端增强：F11 全屏切换，终端内 Ctrl+C/V 智能复制粘贴。",
+    en: "DeepSeek Harness desktop tweaks: F11 fullscreen toggle, and Ctrl+C / Ctrl+V copy and paste in the terminal.",
+    zh: "DeepSeek Harness 桌面端修改：F11 全屏切换，终端内使用 Ctrl+C/V 复制粘贴。",
   },
   plugins: [
     {
       name: pkg.name,
       title: { en: "Desktop Tweaks", zh: "桌面增强" },
       description: {
-        en: "F11 fullscreen toggle and smart Ctrl+C/V in the built-in terminal.",
-        zh: "F11 切换窗口全屏；终端内 Ctrl+C/V 智能复制粘贴。",
+        en: "F11 fullscreen toggle, and Ctrl+C / Ctrl+V copy and paste in the terminal.",
+        zh: "F11 全屏切换，终端内使用 Ctrl+C/V 复制粘贴。",
       },
       icon: "icons/icon.svg",
       author: pkg.author,

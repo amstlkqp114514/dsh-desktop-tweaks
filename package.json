@@ -1,7 +1,7 @@
 {
   "name": "dsh-desktop-tweaks",
-  "version": "0.1.0",
-  "description": "Desktop tweaks for DeepSeek Harness: F11 fullscreen toggle and smart Ctrl+C/V in the built-in terminal.",
+  "version": "0.1.1",
+  "description": "DeepSeek Harness desktop tweaks: F11 fullscreen toggle, and Ctrl+C / Ctrl+V copy and paste in the terminal.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {

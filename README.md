@@ -1,9 +1,9 @@
 # DSH Desktop Tweaks（桌面增强）
 
-DeepSeek Harness 桌面端的两个小增强，各自带开关，入口在 **设置 → 通用**：
+DeepSeek Harness 桌面端修改：F11 全屏切换，终端内使用 Ctrl+C/V 复制粘贴。两个功能各自带开关，入口在 **设置 → 通用**：
 
 - **F11 切换窗口全屏**：进入全屏时隐藏「应用 / 编辑」菜单栏与后退、前进按钮，内容顶到屏幕最上沿；退出全屏后恢复。
-- **终端 Ctrl+C / Ctrl+V 智能复制粘贴**：终端内有选区时 `Ctrl+C` 复制、无选区时照常发送 `SIGINT`；`Ctrl+V` 直接粘贴（走 xterm 的粘贴通道，多行文本不会弹确认）。
+- **终端使用 Ctrl+C/V 复制粘贴**：终端内有选区时 `Ctrl+C` 复制、无选区时照常发送 `SIGINT`；`Ctrl+V` 直接粘贴（走 xterm 的粘贴通道，多行文本不会弹确认）。
 
 不修改 DSH 本身，只通过客户端插件注入少量事件监听与样式；两个开关都可独立关闭，关闭后行为与原生完全一致。
 
@@ -33,7 +33,7 @@ dsh plugin --profile desktop add dsh-desktop-tweaks
 ```bash
 # tarball
 npm pack
-dsh plugin --profile desktop add ./dsh-desktop-tweaks-0.1.0.tgz
+dsh plugin --profile desktop add ./dsh-desktop-tweaks-0.1.1.tgz
 
 # 本地目录（link，改代码立即生效，适合开发）
 dsh plugin --profile desktop add /path/to/dsh-desktop-tweaks
@@ -44,17 +44,17 @@ dsh plugin --profile desktop add "github:amstlkqp114514/dsh-desktop-tweaks#<comm
 
 ### 这些安装方式有什么区别
 
-| 方式 | 实际行为 | 适合 |
-| --- | --- | --- |
-| 市场 / `add dsh-desktop-tweaks` | pnpm 从 npm registry 安装预构建包，与市场安装完全同一套流程 | 普通用户 |
-| 本地目录 | `link:`，profile 里只放软链接 | 开发调试 |
-| tgz / git | 把包内容复制进 profile，与源目录脱钩 | 分发、锁版本 |
+| 方式                            | 实际行为                                                    | 适合         |
+| ------------------------------- | ----------------------------------------------------------- | ------------ |
+| 市场 / `add dsh-desktop-tweaks` | pnpm 从 npm registry 安装预构建包，与市场安装完全同一套流程 | 普通用户     |
+| 本地目录                        | `link:`，profile 里只放软链接                               | 开发调试     |
+| tgz / git                       | 把包内容复制进 profile，与源目录脱钩                        | 分发、锁版本 |
 
 本插件是纯 ESM、无构建步骤；只有带 `prepare` 构建脚本的包才需要在 `pnpm-workspace.yaml` 里配置 `allowBuilds`。
 
 ## 设置入口
 
-设置 → 通用 → 「F11 切换窗口全屏」「终端 Ctrl+C/V 智能复制粘贴」。默认开启，状态保存在本地 `localStorage`（键 `dsh-desktop-tweaks/settings`）。
+设置 → 通用 → 「F11 切换窗口全屏」「终端 Ctrl+C/V 复制粘贴」。默认开启，状态保存在本地 `localStorage`（键 `dsh-desktop-tweaks/settings`）。
 
 ## 兼容性
 
@@ -108,4 +108,4 @@ MIT © 2026 青柑橘
 
 ---
 
-**English**: Desktop tweaks for DeepSeek Harness — F11 fullscreen toggle (hides the Windows menu bar and back/forward buttons while fullscreen) and smart Ctrl+C/V inside the built-in terminal. Toggle both in **Settings → General**. Install with `dsh plugin --profile desktop add dsh-desktop-tweaks`, or add the market index `https://amstlkqp114514.github.io/dsh-desktop-tweaks/index.json`. MIT licensed.
+**English**: DeepSeek Harness desktop tweaks: an F11 fullscreen toggle (hides the Windows menu bar and the back/forward buttons while fullscreen), and Ctrl+C / Ctrl+V copy and paste inside the built-in terminal. Both are switchable in **Settings → General**. Install with `dsh plugin --profile desktop add dsh-desktop-tweaks`, or add the market index `https://amstlkqp114514.github.io/dsh-desktop-tweaks/index.json`. MIT licensed.
